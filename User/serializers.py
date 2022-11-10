@@ -23,4 +23,5 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         token = super().get_token(user)
         # Add custom claims
         token['email'] = user.email
+        token['token_message']= 'sparta_time_attack'
         return token
